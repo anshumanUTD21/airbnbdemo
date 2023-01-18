@@ -9,13 +9,18 @@ function App() {
     return (
       <Card
         key={item.id}
-        coverImg={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
-        openSpots={item.openSpots}
+        //best method------------
+        {...item}
+        //method 1----------------
+        // item={item}
+        //method 2----------------
+        // coverImg={item.coverImg}
+        // rating={item.stats.rating}
+        // reviewCount={item.stats.reviewCount}
+        // location={item.location}
+        // title={item.title}
+        // price={item.price}
+        // openSpots={item.openSpots}
       />
     );
   });

@@ -8,6 +8,8 @@ function Card(props) {
     badgeText = "ONLINE";
   }
 
+  console.log(props);
+
   return (
     <section className="card-container">
       {badgeText && <div className="card-tag">{badgeText}</div>}
@@ -15,8 +17,8 @@ function Card(props) {
       <div className="card-details">
         <div className="card-details_first">
           <img src="Star.png" alt="rating stars" className="star-img" />
-          <span className="rating">{props.rating}</span>
-          <span className="rating_no">&#40;{props.reviewCount}&#41;</span>
+          <span className="rating">{props.stats.rating}</span>
+          <span className="rating_no">&#40;{props.stats.reviewCount}&#41;</span>
           <span className="dash">&#45;</span>
           <span className="location">{props.location}</span>
         </div>
