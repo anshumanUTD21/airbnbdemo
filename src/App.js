@@ -8,12 +8,14 @@ function App() {
   const dataFile = data.map((item) => {
     return (
       <Card
+        key={item.id}
         coverImg={item.coverImg}
         rating={item.stats.rating}
         reviewCount={item.stats.reviewCount}
         location={item.location}
         title={item.title}
         price={item.price}
+        openSpots={item.openSpots}
       />
     );
   });
@@ -23,7 +25,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      {dataFile}
+      <section className="card-list">{dataFile}</section>
     </div>
   );
 }

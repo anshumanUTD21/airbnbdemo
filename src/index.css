@@ -65,7 +65,16 @@ section {
 .card-container {
   display: flex;
   flex-direction: column;
+
   margin: 0px 0 16px 36px;
+  flex: 0 0 auto; /* ADD */
+  position: relative;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow-x: auto;
 }
 .card-details {
   margin-top: 8px;
@@ -78,7 +87,7 @@ section {
 }
 
 .card-details_first {
-  position: relative;
+  /* position: relative; */
   display: flex;
   align-items: center;
   gap: 3px;
@@ -94,8 +103,8 @@ section {
 .card-tag {
   position: absolute;
   background-color: #fff;
-  top: -230px;
-  left: 10px;
+  top: 30px;
+  left: 30px;
   border-radius: 2px;
   padding: 5px;
   font-family: Poppins;
@@ -112,7 +121,7 @@ section {
 }
 .rating_no,
 .dash,
-.country {
+.location {
   color: #918e9b;
 }
 
@@ -134,10 +143,3 @@ section {
 .price {
   font-weight: 600;
 }
-/* 
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/anshumanUTD21/airbnbdemo.git
-git push -u origin main */
